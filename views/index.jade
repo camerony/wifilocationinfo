@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  .row.content
+    .col-md-4
+      form(role="form")
+        #macs
+          .form-group
+            label(for="mac1") Mac Address
+            input.form-control(type="text", id="mac1")
+          .form-group
+            label(for="mac2") Mac Address
+            input.form-control(type="text", id="mac2")
+        .btndiv
+          button#addbtn.btn.btn-xs.btn-default Add Mac
+        .btndiv
+          button#locatebtn.btn.btn-lg.btn-primary Locate
+        #howto
+          h4 How To Find Mac Addresses
+          ul
+            li 
+              a(href="http://www.etherhex.com/2013/01/using-netsh-for-viewing-wireless-networks/", target="_new") Windows
+            li 
+              a(href="http://osxdaily.com/2007/01/18/airport-the-little-known-command-line-wireless-utility/", target="_new") Mac OS X
+            li 
+              a(href="http://linux.die.net/man/8/iwlist", target="_new") Linux
+    .col-md-8
+      #locationdetails
+        .row
+          .col-md-4 Lat
+          .col-md-4 Long
+          .col-md-4 Accuracy
+          #latdetail.col-md-4 &nbsp;
+          #longdetail.col-md-4
+          #accuracydetail.col-md-4
+      #map-canvas
+      script(type="text/javascript", src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqVvlF35gLvdXPlRZNJ2_hWd0KqzHTcNs&sensor=true")
+      script(src="/js/map.js")
+  .row.content
+    .col-md-12 Google has been collecting data about WiFi networks using it's Street View cars and Android cell phones.  This has been a very controversial process, but Google has made this data publiclly accessible.  Above you can sample the results by sending two distinct MAC Addresses from wireless networks.
