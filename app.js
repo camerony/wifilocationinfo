@@ -12,7 +12,7 @@ var express = require('express')
 var app = express();
 
 app.configure(function(){
-  app.set('port', parseInt(process.env.OPENSHIFT_INTERNAL_PORT) || 8080);
+  app.set('port', parseInt(process.env.OPENSHIFT_NODEJS_PORT) || 8080);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.logger('dev'));
