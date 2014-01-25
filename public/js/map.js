@@ -33,22 +33,22 @@ function addMac() {
 
 function getMacs() {
   var returnmacs = [];
-
-  for (var i = 0; i < $("#macs").children().length; i++) {
+  var children = $("#macs").children()
+  for (var i = 0; i < children.length; i++) {
     var macregex = /^([0-9a-fA-F]{2}[\:]){5}[0-9a-fA-F]{2}$/
 
     var val = $.trim($("#mac" + (i + 1)).val());
 
     if (val !== "") {
       if (macregex.test(val)) {
+        $(children[i]).removeClass('has-error')
         returnmacs.push({"macAddress" : val})
       }
       else {
-        console.log('invalid mac, do something')
+        $(children[i]).addClass('has-error')
       }
     }
   }
-
   return returnmacs;
 }
 
@@ -81,8 +81,8 @@ function updateMap(d) {
 
 function locate() {
   macs = getMacs()
-
-  if (macs.length === 0) {
+  if (macs.length < 2) {
+    $('.form-group').addClass('has-error')
     return false;
   }
 
@@ -108,5 +108,6 @@ function locate() {
 $(function () {
   initialize();
   $("#addbtn").on("click", addMac)
-  $("#locatebtn").on("click", locate)
+  //$("#locatebtn").on("click", locate)
+  $("#locateform").on('submit', locate)
 })

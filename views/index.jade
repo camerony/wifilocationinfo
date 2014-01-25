@@ -3,18 +3,18 @@ extends layout
 block content
   .row.content
     .col-md-4
-      form(role="form")
+      form#locateform(role="form")
         #macs
           .form-group
-            label(for="mac1") Mac Address
+            label.control-label(for="mac1") Mac Address
             input.form-control(type="text", id="mac1")
           .form-group
-            label(for="mac2") Mac Address
+            label.control-label(for="mac2") Mac Address
             input.form-control(type="text", id="mac2")
         .btndiv
-          button#addbtn.btn.btn-xs.btn-default Add Mac
+          button#addbtn.btn.btn-xs.btn-default(type='button') Add Mac
         .btndiv
-          button#locatebtn.btn.btn-lg.btn-primary Locate
+          button#locatebtn.btn.btn-lg.btn-primary(type='submit') Locate
         #howto
           h4 How To Find Mac Addresses
           ul

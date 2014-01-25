@@ -1,8 +1,9 @@
       html { height: 100% }
-      body { height: 100%; margin: 0; padding: 0; background-image: url('/images/bg.png'); color: #333}
+      body { height: 100%; margin: 0; padding: 0; background-image: url('/images/cartographer.png'); color: #333}
       #map-canvas { height: 400px }
       .btndiv { margin-top: 16px; }
       h1 small { color: #fff; }
+      h1 { color: #7FFF00}
       .exo {font-family: 'Exo 2', sans-serif;}
-      .content { background-color: #fff; margin-bottom: 32px; padding-top: 16px; padding-bottom: 16px; border-radius: 16px; -moz-border-radius: 16px; border: 2px solid #333;}
+      .content { background-color: #fff; margin-bottom: 32px; padding-top: 16px; padding-bottom: 16px; border-radius: 16px; margin-left: 16px; margin-right: 16px; }
       #howto{ padding-top: 32px;}
