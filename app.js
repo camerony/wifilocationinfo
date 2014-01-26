@@ -30,6 +30,6 @@ app.configure('development', function(){
 app.get('/', routes.index);
 app.post('/locate', routes.locate)
 
-http.createServer(app).listen(app.get('port'), function(){
+http.createServer(app).listen(app.get('port'), app.get('ipaddr'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
