@@ -4,7 +4,7 @@ exports.index = function(req, res){
 
 exports.locate = function(req, res) {
   var g = require('../googlegeolocationapi')
-  var googleAPIKey = 'AIzaSyDzcv8DIbbeGBaONSq2kXh7g9AZbgsiUC8' //AIzaSyBCN3M5g7tbBGaFGAUoulKRLshA6_McArY';
+  var googleAPIKey = 'AIzaSyBCN3M5g7tbBGaFGAUoulKRLshA6_McArY';
   
   var body = { wifiAccessPoints: req.body }
 
