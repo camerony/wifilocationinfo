@@ -1,4 +1,4 @@
-var googleAPIKey = 'AIzaSyBCN3M5g7tbBGaFGAUoulKRLshA6_McArY';
+var googleAPIKey = 'AIzaSyCqVvlF35gLvdXPlRZNJ2_hWd0KqzHTcNs' //AIzaSyBCN3M5g7tbBGaFGAUoulKRLshA6_McArY';
 
 /****************
                             SSID BSSID             RSSI CHANNEL HT CC SECURITY (auth/unicast/group)
@@ -22,7 +22,7 @@ var g = require('./googlegeolocationapi')
 
 g(googleAPIKey,body,function (e,res) {
 		if (e) {
-			console.log('Error:',e);
+			console.log('Error:',e); 
 			return false;
 		}
 
