@@ -9,5 +9,5 @@
     "express": "3.0.1",
     "jade": "*"
   },
-  "main" : "app.js"
+  "main" : "dummy.js"
 }
