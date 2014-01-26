@@ -1,4 +1,4 @@
-var googleAPIKey = 'AIzaSyCqVvlF35gLvdXPlRZNJ2_hWd0KqzHTcNs' //AIzaSyBCN3M5g7tbBGaFGAUoulKRLshA6_McArY';
+var googleAPIKey = 'AIzaSyDzcv8DIbbeGBaONSq2kXh7g9AZbgsiUC8' //AIzaSyBCN3M5g7tbBGaFGAUoulKRLshA6_McArY';
 
 /****************
                             SSID BSSID             RSSI CHANNEL HT CC SECURITY (auth/unicast/group)
