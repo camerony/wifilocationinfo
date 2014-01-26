@@ -13,6 +13,7 @@ var app = express();
 
 app.configure(function(){
   app.set('port', parseInt(process.env.OPENSHIFT_NODEJS_PORT) || 8080);
+  app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.logger('dev'));
