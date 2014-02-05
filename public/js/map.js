@@ -86,13 +86,32 @@ function locate() {
     return false;
   }
 
+  var body = {'wifiAccessPoints': [] }
+
+  for (var i = 0; i < macs.length; i++) {
+    body.wifiAccessPoints.push(macs[i])
+  }
+console.log(body)
+/*
+  $.getJSON('https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCqVvlF35gLvdXPlRZNJ2_hWd0KqzHTcNs',body, function (data) {
+    if (data && data.location) {
+      updateDetails(data);
+      updateMap(data)
+    }
+    else {
+      console.log('error getting location',data)
+    }
+  })
+*/
+
   $.ajax({
-    url: "/locate",
+    url: "https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCqVvlF35gLvdXPlRZNJ2_hWd0KqzHTcNs",
     type: "POST",
-    data: JSON.stringify(macs),
+    data: JSON.stringify(body),
     contentType: "application/json",
     success: function (data) {
-      data = JSON.parse(data)
+      console.log(data)
+      //data = JSON.parse(data)
       if (data && data.location) {
         updateDetails(data);
         updateMap(data)
@@ -102,6 +121,7 @@ function locate() {
       }
     }
   })
+
   return false;
 }
 
